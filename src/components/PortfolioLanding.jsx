@@ -1,22 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
-import logo from "./assets/logo.png";
+import logo from "../assets/logo.png";
 import { motion } from "framer-motion";
 
-// React + Tailwind Single-Page Portfolio
-// - Responsive across md, sm, lg, mobile
-// - Smooth scroll navigation
-// - Enhanced typing animation (natural typing + erasing)
-// - Animated progress bars + circular skills
-// - Image placeholders retained
+
 
 export default function PortfolioLanding() {
-  // --- PRELOADER STATE (added) ---
+
   const [loading, setLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // wait for main images (logo and newsletter) to load before hiding loader
-    const imagesToLoad = [logo, "/newsletter.jpg"];
+    const imagesToLoad = [logo, "./assets/newsletter.jpg"];
     let loadedCount = 0;
     let mounted = true;
 
